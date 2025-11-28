@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Pokémon!</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 🎨 Estilos Globais */
+        body {
+            font-family: 'Poppins', sans-serif; /* Fonte mais moderna e limpa */
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('pokemon-background-new.png'); /* Altere o caminho da imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #f2b400; /* Amarelo Pokémon */
+            text-align: center;
+            margin-top: 40px;
+            font-size: 3em;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Container de Botões */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        /* Estilo dos Botões */
+        .nav-button {
+            display: block;
+            background-color: #ffcb05;
+            color: #2a75bb;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 30px;
+            font-size: 1.4em;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            width: 250px;
+            text-transform: uppercase;
+        }
+
+        /* Efeitos de Hover e Foco */
+        .nav-button:hover {
+            background-color: #2a75bb;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-button:active {
+            background-color: #004085;
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo dos Card de Pokémon */
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #ffcb05;
+            font-size: 1.6em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #333;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        /* Estilo Responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+                padding: 15px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-button {
+                font-size: 1.2em;
+                padding: 15px 25px;
+                width: 80%;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Desafio CSS: Treinamento Pokémon</h1>
+
+    <div class="button-container">
+        <a href="ex01.html" class="nav-button">1- Flexbox</a>
+        <a href="ex02.html" class="nav-button">2- Espaçar Igualmente</a>
+        <a href="ex03.html" class="nav-button">3- Pokémon na Grama</a>
+        <a href="ex04.html" class="nav-button">4- Torre Pokémon</a>
+        <a href="ex05.html" class="nav-button">5- O Gengar Fugitivo!</a>
+        <a href="ex06.html" class="nav-button">6- Habitat 2x2</a>
+        <a href="ex07.html" class="nav-button">7- O Snorlax Bloqueia a Passagem</a>
+        <a href="ex08.html" class="nav-button">8- A Videira do Oddish</a>
+        <a href="ex09.html" class="nav-button">9- Alinhamento no Habitat</a>
+        <a href="ex10.html" class="nav-button">10- Posicionando os Lendários</a>
+    </div>
+
+    <div class="button-container">
+        <!-- Exemplos de Cards de Pokémon -->
+        <div class="card">
+            <img src="img/pikachu-pokemon.gif" alt="Pikachu">
+            <h3>Pikachu</h3>
+            <p>O Pokémon Elétrico mais famoso. Sempre ao lado de Ash!</p>
+        </div>
+        <div class="card">
+            <img src="img/bulbasaur-pokemon.gif" alt="Bulbasaur">
+            <h3>Bulbasaur</h3>
+            <p>Bulbasaur, o Pokémon Planta/Venenoso. O primeiro da Pokédex!</p>
+        </div>
+        <div class="card">
+            <img src="img/charmander-chases-tail.gif" alt="Charmander">
+            <h3>Charmander</h3>
+            <p>Charmander, o Pokémon de Fogo. Um dos iniciais mais queridos.</p>
+        </div>
+    </div>
+
+    <style>
+    /* POKÉMONS NAS BORDAS */
+    .pokemon-border {
+        position: fixed;
+        z-index: 999;
+        pointer-events: none; /* Não atrapalha cliques no site */
+    }
+
+    /* Pikachu no canto inferior esquerdo */
+    .pikachu {
+        bottom: 10px;
+        left: 10px;
+        width: 150px;
+        animation: bounce 3s infinite ease-in-out;
+    }
+
+    /* Charmander no canto inferior direito */
+    .charmander {
+        bottom: 10px;
+        right: 10px;
+        width: 150px;
+        animation: wiggle 4s infinite ease-in-out;
+    }
+
+    /* Bulbasaur na lateral esquerda */
+    .bulbasaur {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 140px;
+        animation: float 5s infinite ease-in-out;
+    }
+
+    /* Squirtle na lateral direita */
+    .squirtle {
+        top: 30%;
+        right: 0;
+        width: 140px;
+        animation: float-rev 5s infinite ease-in-out;
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    @keyframes wiggle {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(-50%) translateX(0); }
+        50% { transform: translateY(-55%) translateX(10px); }
+    }
+
+    @keyframes float-rev {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-10px); }
+    }
+</style>
+
+<!-- POKÉMONS NAS BORDAS -->
+<img src="img/rayquaza.gif" class="pokemon-border pikachu">
+<img src="img/mewtwo-sprite.gif" class="pokemon-border charmander">
+<img src="img/gengar.gif" class="pokemon-border bulbasaur">
+<img src="img/darkrai-pokémon-darkrai.gif" class="pokemon-border squirtle">
+
+
+</body>
+</html>
